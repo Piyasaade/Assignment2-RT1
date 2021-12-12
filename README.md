@@ -2,6 +2,7 @@
 The main purpose of this project is to drive a robot in a specific path, while avoiding the wall, as it also decreases and increases its velocity according to the input given by a user.However, by calling a built in service 'reset_position', which means the robot will restart from its initial state.
 
 # Flowchart:
+![Flowchart-RT1-Assignment1 (1)](https://user-images.githubusercontent.com/94491181/142486425-a486f0be-6fb5-47ce-b4e7-83525b9947b2.jpg)
 The above flowchart describes the logic based on which the robot is acting in a way to follow its path with specific speed.
 First, the robot will drive forward checking the distances on its left, right and front.Getting the minimum ranges on these three directions, the robot has 8 cases to check while driving.Starting with the minimum front distance on the left, if this distance is greater than one it means that it has to check its front and right distances. If both directions are greater than 1 than the robot is safe, while if the right side is not safe obviously the robot has to turn on its left, while if the front side is not safe wich means less than 1, then the robot has to turn on its left. Those 4 cases show that when the left side is safe, once one of the other sides is not, then the robot directly will take the safe side which is the left one. Otherwise, if the three of them are safe then will drive forward.
 But in the case where the minimum left distance is less than 1 the robot has to take the right direction, unless, the front side is safe and the others are not then the robot will drive forward.
