@@ -8,6 +8,8 @@ First, the robot will drive forward checking the distances on its left, right an
 But in the case where the minimum left distance is less than 1 the robot has to take the right direction, unless, the front side is safe and the others are not then the robot will drive forward.
 
 # Services:
+![Flowchart-RT1-Assignment1 (1)](https://github.com/Piyasaade/Assignment2-RT1/blob/main/Assignment%202%20(1).jpg)
+
 Services are another way to pass data between nodes in ROS. Services are just synchronous remote procedure calls; they allow one node to call a function that executes in another node. The first step in creating a new service is to define the service call inputs and outputs, in our case is called 'speed.srv' which is a custom service. Our example service, send as input a string, This means that the input to the service call should be a string and the output should be a float which is the new speed of the robot that can be increased or decreased. As for the server part, written in the controller code,specifies a callback that will be run when the service call is made, and then waits for requests to come in.For the client part, once the service is called a UI will ask the user to enter a character 'I' for increase and 'D' for decrease and this request will be sent to the server and contorlling the speed of the robot.
 In the case of a built in service, in our example we used the "reset position', once this service is called the robot will restart from its initial position.
 # Topics:
