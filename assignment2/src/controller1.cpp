@@ -9,19 +9,17 @@ ros::Subscriber sub;
 ros::Publisher pub;
 ros::ServiceClient client1;
 float spd=0.5;
-int count1=0;
-int count2=0;
+
 
 
 bool my_new_vel (my_srv::Speed::Request &req, my_srv::Speed::Response &res){
 	my_srv::Speed speed_srv;
 		if (req.a == "I" ){
 		res.x = spd + 0.2*spd;
-		count1++;	
+			
 		}
 		else if (req.a == "D" && count2 <= 4){
 		res.x = spd - 0.2*spd;
-		count2++;
 		}
 		if (res.x > 1.3 || res.x < 0.2){
 		res.x=0.5;
