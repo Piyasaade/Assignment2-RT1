@@ -14,3 +14,8 @@ Services are another way to pass data between nodes in ROS. Services are just sy
 In the case of a built in service, in our example we used the "reset position', once this service is called the robot will restart from its initial position.
 # Topics:
 Topics have anonymous publish/subscribe semantics,they are intended for unidirectional, streaming communication. A node that is interested in a certain kind of data will subscribe to the appropriate topic. In our example, the base_scan topic is used to get all the distances from 0 to 180 degrees of the robot giving 720 ranges.The main purpose of using this topic is to detect the ditances and control the robot upon it.
+# Improvements can be done:
+PID can be used in such project whil using ROS, which stands for Proportional, Integral, Derivative.
+PID control provides a continuous variation of output within a control loop feedback mechanism to accurately control the process, removing oscillation and increasing process efficiency.
+Where proportional control is used to minimize the oscillation characteristic of on/off control, PID control goes that bit further to reduce errors and provide accuracy and stability in a process. It does this by using the integral action and derivative actions to eliminate control deviation errors and to manage rapid process movements. All three PID terms need to tuned appropriately for the application requirements to achieve the most accurate control.
+The PID gains can be designed based upon the system parameters if they can be achieved or estimated precisely.
