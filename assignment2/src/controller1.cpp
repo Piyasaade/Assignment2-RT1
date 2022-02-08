@@ -18,7 +18,7 @@ bool my_new_vel (my_srv::Speed::Request &req, my_srv::Speed::Response &res){
 		res.x = spd + 0.2*spd;
 			
 		}
-		else if (req.a == "D" && count2 <= 4){
+		else if (req.a == "D" ){
 		res.x = spd - 0.2*spd;
 		}
 		if (res.x > 1.3 || res.x < 0.2){
