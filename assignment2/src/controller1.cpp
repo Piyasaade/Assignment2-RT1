@@ -39,21 +39,21 @@ void laserCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
 	//spd=speed;
 	for (int i=145;i<288;i++) // front right
 	{
-	min_FrontRight=msg-> ranges[i];
-	if (min_FrontRight > msg-> ranges[i]);
-	min_FrontRight = msg-> ranges[i];
+	min_FrontRight=msg-> ranges[i]
+	if (min_FrontRight > msg-> ranges[i])
+	min_FrontRight = msg-> ranges[i]
 	}
 	for (int i=289;i<432;i++) // front 
 	{
-	min_Front=msg-> ranges[i];
-	if (min_Front > msg-> ranges[i]);
-	min_Front = msg-> ranges[i];
+	min_Front=msg-> ranges[i]
+	if (min_Front > msg-> ranges[i])
+	min_Front = msg-> ranges[i]
 	}
 	for (int i=433;i<576;i++) // front left
 	{
-	min_FrontLeft=msg-> ranges[i];
-	if (min_FrontLeft > msg-> ranges[i]);
-	min_FrontLeft = msg-> ranges[i];
+	min_FrontLeft=msg-> ranges[i]
+	if (min_FrontLeft > msg-> ranges[i])
+	min_FrontLeft = msg-> ranges[i]
 	}
 
 	geometry_msgs::Twist my_vel;
